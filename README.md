@@ -1,4 +1,4 @@
-Project 3 – Practice 3B
+Project 3 – Practice 3 B
 
 This is a small practice project I made while learning Python, Tkinter, and databases.
 I’m still an amateur and currently learning step by step, so this project is mainly for practice and personal growth.
