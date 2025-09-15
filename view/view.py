@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter.messagebox as msg
-from Data_Access.practice_3_b_data_management import *
-from Tools.practice_3_b_validators import *
+from data_access.practice_3_b_data_management import *
+from tools.validators import *
 
 
 def save_click():
@@ -16,6 +16,7 @@ def save_click():
         nickname.set("")
         account_access.set(False)
     except Exception as e:
+        e.with_traceback()
         msg.showerror("Error", f"{e}")
 
 
