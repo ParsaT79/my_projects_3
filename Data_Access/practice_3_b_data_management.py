@@ -2,7 +2,7 @@ import sqlite3
 
 
 def create_table():
-    connection = sqlite3.connect("practice_3_b.db")
+    connection = sqlite3.connect("Data_Access/practice_3_b.db")
     cursor = connection.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS user_list
                       (
@@ -26,7 +26,7 @@ def create_table():
 
 
 def save_user(username, password, nickname, account_access):
-    connection = sqlite3.connect("practice_3_b.db")
+    connection = sqlite3.connect("Data_Access/practice_3_b.db")
     cursor = connection.cursor()
     cursor.execute("""INSERT INTO user_list (username, password, nickname, account_access)
                       VALUES (?, ?, ?, ?)""",
