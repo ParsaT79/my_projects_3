@@ -17,7 +17,7 @@ def create_table():
                           TEXT,
                           nickname
                           TEXT,
-                          account_status
+                          account_access
                           INTEGER
                       )
                    """)
@@ -25,11 +25,11 @@ def create_table():
     connection.close()
 
 
-def save_user(username, password, nickname, account_status):
+def save_user(username, password, nickname, account_access):
     connection = sqlite3.connect("practice_3_b.db")
     cursor = connection.cursor()
-    cursor.execute("""INSERT INTO user_list (username, password, nickname, account_status)
+    cursor.execute("""INSERT INTO user_list (username, password, nickname, account_access)
                       VALUES (?, ?, ?, ?)""",
-                   (username, password, nickname, account_status))
+                   (username, password, nickname, account_access))
     connection.commit()
     connection.close()

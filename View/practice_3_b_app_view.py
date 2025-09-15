@@ -9,12 +9,12 @@ def save_click():
         username_validator(username.get())
         password_validator(password.get())
         nickname_validator(nickname.get())
-        save_user(username.get(), password.get(), nickname.get(), account_status.get())
+        save_user(username.get(), password.get(), nickname.get(), account_access.get())
         msg.showinfo("Saved", "User saved!")
         username.set("")
         password.set("")
         nickname.set("")
-        account_status.set(False)
+        account_access.set(False)
     except Exception as e:
         msg.showerror("Error", f"{e}")
 
@@ -39,9 +39,9 @@ Label(window, text="Nickname").place(x=30, y=110)
 Entry(window, textvariable=nickname).place(x=100, y=110)
 
 # account status
-account_status = BooleanVar()
-Label(window, text="Account Status").place(x=30, y=150)
-Checkbutton(window, variable=account_status).place(x=120, y=150)
+account_access = BooleanVar()
+Label(window, text="Account Access").place(x=30, y=150)
+Checkbutton(window, variable=account_access).place(x=120, y=150)
 
 Button(window, text="Save", width=13, command=save_click).place(x=120, y=220)
 
