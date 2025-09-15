@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter.messagebox as msg
-from data_access.practice_3_b_data_management import *
+from data_access.data_management import *
 from tools.validators import *
 
 
